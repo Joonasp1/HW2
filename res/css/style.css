@@ -62,7 +62,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1;
+    z-index: 5;
 }
 
 header:hover {
@@ -111,6 +111,35 @@ nav div.search-container > button {
 nav div.avatar-container {
     margin-right: 15px;
     text-align: right;
+}
+
+#avatar:hover {
+    cursor: pointer;
+}
+
+.drop-down {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    width: 18%;
+    padding: 20px;
+    padding-top: 60px;
+    background-color: white;
+    display: none;
+}
+
+.drop-down:hover {
+    box-shadow: 0 -10px 20px #4d4d4d;
+}
+
+.hyperlink {
+    color: #0277bd;
+    text-decoration: underline;
+}
+
+.hyperlink:hover {
+    cursor: pointer;
 }
 
 .main-container {

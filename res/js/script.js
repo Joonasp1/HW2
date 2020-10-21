@@ -1,7 +1,12 @@
 $(document).ready(function(){
     $('body').on('click', '#like-button', function () {
 
-        console.log("Button pressed!")
+        if($(this).hasClass('liked')){
+            $(this).removeClass('liked')
+        }
+        else{
+            $(this).addClass('liked')
+        }
     
     });
 })

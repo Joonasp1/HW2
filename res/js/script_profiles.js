@@ -31,7 +31,10 @@ function displayProfiles(profiles) {
             <div class="profile-cropper">
                 <img src=${profiles[i].avatar}>
             </div>
+            <br>
             <b>${profiles[i].firstname} ${profiles[i].lastname}</b>
+            <br><br>
+            <button type="button" name="follow" class="follow-button" id="like-button">Follow</button>
         </div>
         `);
 

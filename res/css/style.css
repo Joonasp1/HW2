@@ -263,3 +263,18 @@ nav div.avatar-container {
     height:150%;
     width:auto;
 }
+
+.follow-button {
+    color: white;
+    background-color: rgb(128, 0, 143);
+    border: 1px solid rgb(128, 0, 143);
+    box-shadow: 0 0 5px rgba(128, 0, 143, 0.33);
+}
+
+.follow-button.followed {
+    color: rgb(128, 0, 143);
+    background-color: white;
+    font-weight: bold;
+    border: 1px solid rgb(128, 0, 143);
+    box-shadow: 0 0 5px rgba(128, 0, 143, 0.33);
+}

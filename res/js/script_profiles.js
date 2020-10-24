@@ -62,7 +62,7 @@ function displayProfiles(profiles) {
             <br>
             <b>${profiles[i].firstname} ${profiles[i].lastname}</b>
             <br><br>
-            <button type="button" name="follow" class="follow-button" id="like-button">Follow</button>
+            <button type="button" name="follow" class="follow-button" id="follow-button` + i + `" onclick="followPressed(` + i + `)">Follow</button>
         </div>
         `);
 
@@ -70,6 +70,17 @@ function displayProfiles(profiles) {
     }
 }
 
+function followPressed(id) {
+   var followbutton = document.getElementById("follow-button"+id);
+   if(followbutton.classList.contains('followed')){
+       followbutton.classList.remove('followed');
+       followbutton.textContent = "Follow";
+   }
+   else{
+       followbutton.classList.add('followed');
+       followbutton.textContent = "Followed";
+   }
+}
 
 function displayUserInfo(user) {
     $('#drop-down #name').text(user.firstname + " " + user.lastname);

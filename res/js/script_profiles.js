@@ -1,4 +1,18 @@
 $(function () {
+    $('#avatar').click(function(){
+        $("#drop-down").toggle();
+
+    });
+
+    loadUserInfo()
+        .then(function (user) {
+            displayUserInfo(user)
+        })
+        .catch(function () {
+            alert('Error loading user info')
+        });
+
+
     loadProfiles()
         .then(function (profilesResponse) {
             console.log(profilesResponse);
@@ -9,6 +23,20 @@ $(function () {
             alert('Error loading profiles info')
         });
 });
+
+function loadUserInfo() {
+    return $.get(
+        {
+            url: 'https://private-anon-500a36adbe-wad20postit.apiary-mock.com/users/1',
+            success: function (response) {
+                return response;
+            },
+            error: function () {
+                alert('error')
+            }
+        }
+    );
+}
 
 function loadProfiles() {
     return $.get(
@@ -40,4 +68,11 @@ function displayProfiles(profiles) {
 
         $('.main-container').append(addBody)
     }
+}
+
+
+function displayUserInfo(user) {
+    $('#drop-down #name').text(user.firstname + " " + user.lastname);
+    $('#drop-down #email').text(user.email);
+    $("#avatar").attr("src",user.avatar);
 }

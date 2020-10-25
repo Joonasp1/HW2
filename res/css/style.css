@@ -240,6 +240,8 @@ nav div.avatar-container {
     float:left;
     text-align: center;
     vertical-align: middle;
+    padding-top: 10px;
+    padding-bottom: 40%;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 5px;
